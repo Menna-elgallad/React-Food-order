@@ -1,24 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
-
+import MyHeader from './components/UI/MyHeader';
+import Mealitem from './components/Meals/Mealitem';
+import Modal from './components/UI/Modal';
+import Cartprovioder from './store/CartContext';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <Cartprovioder>
+    <MyHeader></MyHeader>
+    <Mealitem></Mealitem>
+   </Cartprovioder>
   );
 }
 
